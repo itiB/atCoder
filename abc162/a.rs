@@ -1,26 +1,17 @@
-use std::io;
+use proconio::input;
 
 fn main() {
-    let a_vec = read_vec::<i32>();
+    input! {
+        n: i32
+    }
 
-    // for c in &a_vec {
-    //     if c == &7 {
-    //         println!("Yes");
-    //     }
-    // }
+    let n_100 = n / 100;
+    let n_10 = n / 10 % 10;
+    let n_1 = n % 10;
 
-    if a_vec.contains(&7) {
-        println!("Yes!");
+    if n_100 == 7 || n_10 == 7 || n_1 == 7 {
+        println!("Yes");
     } else {
         println!("No");
     }
-}
-
-fn read_vec<T: std::str::FromStr>() -> Vec<T> {
-    let mut line = String::new();
-    io::stdin().read_line(&mut line)
-        .ok()
-        .expect("Faild to read Vec");
-    line.trim().split_whitespace()
-        .map(|i| i.parse().ok().unwrap()).collect()
 }
