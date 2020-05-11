@@ -1,4 +1,5 @@
 use proconio::input;
+use std::cmp::min;
 
 fn main() {
     input! {
@@ -8,19 +9,12 @@ fn main() {
         mut k: i32
     }
 
-    let mut sum = 0;
-
-    if a <= k {
-        sum += a;
-    } else {
-        sum = k;
-    }
-    k = k - a;
-
-    k = k - b;
+    let mut _sum = 0;
+    _sum = min(a, k);
+    k = k - _sum - b;
 
     if k > 0 {
-        sum = sum - k;
+        _sum = _sum - k;
     }
-    println!("{}", sum);
+    println!("{}", _sum);
 }
