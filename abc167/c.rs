@@ -1,4 +1,5 @@
 use proconio::input;
+use std::cmp::min;
 
 fn main() {
     input! {
@@ -7,39 +8,36 @@ fn main() {
         x: i32, // 10 ^ 5
         c: [[i32; m + 1]; n],
     }
-    let mut und = vec![0; m];
+    let mut min_cost = i32::max_value(); // 適当に大きな数字
 
-    for mid in c {
-        for i in 0..m {
-            und[i] += mid[i + 1];
-        }
-    }
-    if und.iter().filter(|ga| ga <= &&x).count() > 0 {
-        println!("-1");
-        return
-    }
+    // 2進数で各本の有無についてループを回す
+    // ex. 0 0 0: 買わない 買わない 買わない
+    //     0 0 1: 買わない 買わない 買う
+    //     0 1 0: 買わない 買う 買わない
+    for s in 0..1 << n {
+        let mut cost = 0;
+        let mut und = vec![0; m]; // 理解度
 
-    println!("{:?}", und);
-}
-
-fn dfs(abcd: &Vec<(usize, usize, i32, i32)>, ga: &mut Vec<i32>, lower: i32, m: i32, i: usize) -> i32 {
-    if ga.len() == i {
-        // 長さnまで到達したら終了，得点計算
-        let mut score = 0;
-        for &(a, b, c, d) in abcd {
-            // 配列アクセスのため0スタートに合わせる
-            if ga[b - 1] - ga[a - 1] == c {
-                score += d;
+        // 各本について買ったか買ってないかをループで見る
+        for i in 0..n {
+            if s >> i & 1 == 1 {
+                // ibit目が立っているならi番目のコストを追加
+                cost += c[i][0];
+                for j in 0..m {
+                    und[j] += c[i][j + 1];
+                }
+                // xを下回る理解度が存在するならば
+                // if und.iter().filter(|ga| ga < &&x).count() == 0 {
+                if und.iter().all(|ga| ga >= &&x) {
+                    // 現在の金額と比較して低いほうに更新
+                    min_cost = min(min_cost, cost);
+                }
             }
         }
-        return score;
     }
-    let mut ans = 0;
-    // 最後の桁を"1つ前の値" ~ 最大値mまで変化させる
-    for lastnum in lower..=m {
-        ga[i] = lastnum;
-        let t = dfs(abcd, ga, lastnum, m, i + 1);
-        ans = if ans > t { ans } else { t };
+    if min_cost != i32::max_value() {
+        println!("{}", min_cost);
+    } else {
+        println!("-1");
     }
-    ans
 }
