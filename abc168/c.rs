@@ -9,6 +9,9 @@ fn main() {
         m: f64,
     }
 
+    // 中心角[rad] = 2pi / 半径
+    // 中心角[rad] = 2pi * (x° / 360°) = x° * pi / 180°
+    // ラジアン 180° = pi, 360° = 2pi
     let h_theta = 2.0 * PI * (h + m / 60.0) / 12.0;
     let m_theta = 2.0 * PI * m / 60.0;
 
