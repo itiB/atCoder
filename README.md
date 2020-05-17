@@ -38,3 +38,23 @@
   - 式の答えを出すことができる範囲を求めて総当たり計算させる
   - 制約よりループの範囲を求めることでできる
 
+### abc167
+- A - Registration
+  - 文字列一致の問題
+- B - Easy Linear Programming
+  - 線形計画問題
+- C - Skill Up
+  - 全探索
+- D - Teleporter
+  - 部分集合の探索
+  - 01で集合を分ける
+
+### abc168
+
+- A - ∴ (Therefore)
+  - switch(match)
+- B - ... (Triple Dots)
+  - 文字列処理(スライス)
+- C - : (Colon)
+  - 三角関数 数学
+  - 2乗, sqrt
