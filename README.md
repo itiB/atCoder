@@ -58,3 +58,6 @@
 - C - : (Colon)
   - 三角関数 数学
   - 2乗, sqrt
+- D - .. (Double Dots)
+  - BFS: 幅優先探索
+  - キューの作成
