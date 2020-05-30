@@ -73,3 +73,16 @@
 - [D - .. (Double Dots)](/abc168/d.rs)
   - BFS: 幅優先探索
   - キューの作成
+
+## others
+
+### nomura2020
+
+- [A - Study Scheduling](/nomura2020/a.rs)
+  - 時間の計算
+- [B - Postdocs](/nomura2020/b.rs)
+  - "?"を置き換えて点数を最大化する問題
+  - 全部Dに置き換えても最大になることに気が付かなった自分を殴りたい
+- [C - Folia](/nomura2020/c.rs)
+  - 2分木の葉の数についての問題
+  - 深さdの最大葉でない頂点の数はA_d+1 + A_d+2.. A_d+n だぁぁぁ泣いた
