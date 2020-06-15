@@ -1,5 +1,16 @@
 # atCoder
 
+## commit message
+
+- add: <コンテスト名> (AC: <問題名>)
+  - コンテストが終わった時点でのコミット
+- <コンテスト名>
+  - README.mdを追加したときのコミット
+- Refact: <問題名>
+  - Refact
+- AC: <問題名>
+  - コンテスト後にACしたものを書く
+
 ## abc
 
 ### abc159
