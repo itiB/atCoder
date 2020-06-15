@@ -5,14 +5,20 @@ fn main() {
         n: i32,
         a: [i64; n],
     }
-    let mut count = 0;
-    let a_it = a.clone();
+    let max = 1000001;
 
-    for num in 0..n {
-        let sum = a_it.iter().filter(|s| a[num as usize] % *s == 0).count();
-        if sum == 1 {
-            count += 1;
+    let mut counter: Vec::<i64> = vec![0; max];
+
+    for num in &a {
+        let mut base = *num as usize;
+        if counter[base] > 0 {
+            counter[base] += 1;
+            continue;
+        }
+        while base < max {
+            counter[base] += 1;
+            base += *num as usize;
         }
     }
-    println!("{}", count);
+    println!("{}", a.iter().filter(|n| counter[**n as usize] == 1).count());
 }
