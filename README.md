@@ -96,6 +96,15 @@
   - エラトステネスの篩もどき
   - 約数がないことを探索する
 
+### abc171
+
+- [A - αlphabet](/abc171/a.rs)
+  - 文字の範囲 a-z A-Z の判別
+- [B - Mix Juice](/abc171/b.rs)
+  -ソートして小さいものから順番に足すだけ
+- [C - One Quadrillion and One Dalmatians](/abc171/c.rs)
+  - 26進数の計算、ずれる分は商-1することでケアする
+
 ## others
 
 ### nomura2020
