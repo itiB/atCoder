@@ -3,18 +3,24 @@ use proconio::input;
 fn main() {
     input! {
         n: usize,
-        mut a: [i32; n],
+        a: [usize; n],
         q: usize,
-        bc: [(i32, i32); q],
+        bc: [(usize, usize); q],
+    }
+
+    let mut counter = vec![0; 100001];
+    for num in a {
+        counter[num] += 1;
     }
 
     for (b, c) in bc {
         let mut sum = 0;
-        for l in 0..a.len() {
-            if a[l] == b {
-                a[l] = c;
-            }
-            sum += a[l];
+        let diff = counter[b];
+        counter[c] += diff;
+        counter[b] = 0;
+
+        for c in 0..counter.len() {
+            sum += c * counter[c];
         }
         println!("{}", sum);
     }
