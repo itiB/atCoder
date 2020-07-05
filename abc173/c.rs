@@ -46,9 +46,9 @@ fn main() {
                 }
             }
         }
-        // println!("wc2: {:?}, {}", this_line, all_black);
-        if all_black > k {
-            let mut need = all_black - k;
+        // println!("all_black: {}, line: {:?}", all_black, this_line);
+        if all_black >= k {
+            let need = all_black - k;
 
             for sw in 0..1 << w {
                 let mut w_sum = 0;
