@@ -2,34 +2,21 @@ use proconio::input;
 
 fn main() {
     input! {
-        n: i64,
+        n: usize,
     }
+    let mut table = vec![0; n];
 
-    for num in 1..n + 1 {
-        let mut count = 0;
-
-        'outer: for x in 1..=num {
-            for y in x..=num {
-                if x * x + 3 * y * y + 2 * x * y > num {
-                    break;
-                }
-                for z in y..=num {
-                    if x * x + y * y + z * z + x * y + y * z + z * x == num {
-                        count += 6;
-                        if x == y || y == z || z == x {
-                            count -= 3;
-                        }
-                        if x == y && x == z {
-                            count -= 2;
-                        }
-                        break 'outer;
-                    }
-                    if x * x + y * y + z * z + x * y + y * z + z * x > num {
-                        break;
-                    }
+    for x in 1..=100 {
+        for y in 1..=100 {
+            for z in 1..=100 {
+                let num = x * x + y * y + z * z + x * y + y * z + z * x;
+                if num <= n {
+                    table[num - 1] += 1;
                 }
             }
         }
-        println!("{}", count);
+    }
+    for a in table {
+        println!("{}", a);
     }
 }

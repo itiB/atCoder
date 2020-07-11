@@ -7,9 +7,5 @@ fn main() {
         d: i32,
     }
 
-    if l % d == 0 {
-        println!("{}", r / d - l / d + 1);
-    } else {
-        println!("{}", r / d - l / d);
-    }
+    println!("{}", r / d - (l - 1) / d);
 }
