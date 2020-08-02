@@ -1,21 +1,26 @@
 use proconio::input;
+use std::collections::HashMap;
 
 fn main() {
     input! {
-        k: i128,
+        k: i32,
     }
-    let max: i128 = 1_000_000;
-    let mut seven: i128 = 7;
+    let mut map = HashMap::new();
+
+    // modの世界で見る
+    let mut x = 7 % k;
     let mut count = 1;
-    while count < max {
-        if seven % k == 0 {
+
+    // 余りがあるループができたら割り切れないことがわかる
+    while !map.contains_key(&x) {
+        // どこかであまり0になったら終了
+        if x == 0 {
             println!("{}", count);
             return;
         }
-        seven += 7 * 10_i128.pow(count as u32) as i128;
-        println!("{} {}", seven, count);
+        map.insert(x, true);
+        x = (10 * x + 7) % k;
         count += 1;
     }
     println!("-1");
 }
-
