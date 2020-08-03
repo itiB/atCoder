@@ -105,6 +105,17 @@
 - [C - One Quadrillion and One Dalmatians](/abc171/c.rs)
   - 26進数の計算、ずれる分は商-1することでケアする
 
+### abc173
+
+- [A - Payment](/abc173/a.rs)
+  - 1000円札のみで支払った際のお釣りを求める
+- [B - Judge Status Summary](/abc173/b.rs)
+  - 文字列の数え上げ
+  - AC, TLE, WA
+- [C - H and V](/abc173/c.rs)
+  - オセロのひっくり返すやつ的な
+  - 選んだ列を塗りつぶしてのこりの色は何個あるか調べる
+
 ### abc174
 
 - [A - Air Conditioner](/abc174/a.rs)
