@@ -11,6 +11,13 @@
 - AC: <問題名>
   - コンテスト後にACしたものを書く
 
+## atc
+
+### atc001
+
+- [B - Union Find](/atc001/b.rs)
+  - UnionFindを用いて入力された値をグループに分ける
+
 ## abc
 
 ### abc051
