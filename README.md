@@ -18,6 +18,14 @@
 - [B - Union Find](/atc001/b.rs)
   - UnionFindを用いて入力された値をグループに分ける
 
+### arc
+
+### arc068
+
+- [C - X: Yet Another Die Game](/arc068/c.rs)
+  - さいころを回して目標の数を超えるのがいつかを調べる問題
+  - 計算で求められる
+
 ## abc
 
 ### abc051
