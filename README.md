@@ -106,6 +106,13 @@
 - [D - Prediction and Restriction](/abc149/d.rs)
   - じゃんけんバトル、特定回数前と同じ手を出すことはできない
 
+### abc158
+
+- [D - String Formation](/abc158/d.rs)
+  - 文字列を入れ替えたりするのは大変なのでどちらが先頭化を記憶しておく
+  - また前後に挿入する場合はVec_dequeをつかうようにしましょうという
+  - あとそれをpirntするときはループで回すと遅いので `queue.iter().rev().collect::<String>()` がおすすめ
+
 ### abc159
 
 - [A - The Number of Even Pairs](/abc159/a.rs)
@@ -306,6 +313,14 @@
 - [B - fLIP](/code-festival-2017-quala/b.rs)
   - オセロ的なひっくり返していくゲーム
   - どちらの列を選択したらいくつひっくり返るかを式にすると解ける
+
+### keyence2020
+
+- [C - Subarray Sum](/keyence2020/c.rs)
+  - 問題の意味がわかればいいゲーム
+  - 制約をもとに埋める値を変えたりしないといけないのは難しいところ
+  - 10^9が与えられた時だけ制約を超えた値を入れないようにしたりとか
+    - 出力長制限超過OLE とかいうのを見たらこれを疑え！
 
 ### nomura2020
 
