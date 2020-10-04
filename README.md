@@ -66,6 +66,12 @@
 
 ## agc
 
+### agc028
+
+- [A - Two Abbreviations](/abc028/a.rs)
+  - range.all()でif文を各サンプルがおいてある
+  - 最大公約数と最小公倍数をもちいて特定の法則で縮めた文字列が一致するかを求める問題
+
 ### agc034
 
 - [A - Kenken Race](/agc034/a.rs)
