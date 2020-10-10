@@ -1,6 +1,66 @@
 # atCoder
 
-[[_TOC_]]
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [atCoder](#atcoder)
+  - [commit message](#commit-message)
+  - [DPまとめコンテスト](#dpまとめコンテスト)
+  - [atc](#atc)
+    - [atc001](#atc001)
+  - [arc](#arc)
+    - [arc058](#arc058)
+    - [arc059](#arc059)
+    - [arc068](#arc068)
+    - [arc098](#arc098)
+  - [agc](#agc)
+    - [agc017](#agc017)
+    - [agc028](#agc028)
+    - [agc034](#agc034)
+    - [agc035](#agc035)
+  - [abc](#abc)
+    - [abc048](#abc048)
+    - [abc051](#abc051)
+    - [abc054](#abc054)
+    - [abc065](#abc065)
+    - [abc082](#abc082)
+    - [abc087](#abc087)
+    - [abc093](#abc093)
+    - [abc094](#abc094)
+    - [abc120](#abc120)
+    - [abc122](#abc122)
+    - [abc131](#abc131)
+    - [abc146](#abc146)
+    - [abc149](#abc149)
+    - [abc158](#abc158)
+    - [abc159](#abc159)
+    - [abc162](#abc162)
+    - [abc164](#abc164)
+    - [abc165](#abc165)
+    - [abc166](#abc166)
+    - [abc167](#abc167)
+    - [abc168](#abc168)
+    - [abc169](#abc169)
+    - [abc170](#abc170)
+    - [abc171](#abc171)
+    - [abc173](#abc173)
+    - [abc174](#abc174)
+    - [abc175](#abc175)
+    - [abc176](#abc176)
+    - [abc177](#abc177)
+    - [abc179](#abc179)
+    - [abc178](#abc178)
+  - [others](#others)
+    - [code-festival-2017-quala](#code-festival-2017-quala)
+    - [keyence2019](#keyence2019)
+    - [keyence2020](#keyence2020)
+    - [nomura2020](#nomura2020)
+    - [aising2020](#aising2020)
+    - [Codefestival_2016_final](#codefestival_2016_final)
+    - [hhkb2020](#hhkb2020)
+
+<!-- /code_chunk_output -->
 
 ## commit message
 
@@ -410,7 +470,6 @@
   - 計算パズル系
   - 3変数で特定の値を作ろうとしてるように見えて実は1変数で何個の組み合わせを作れるかはわかる
 - [D - Leaping Tak](/abc179/d.rs)
-  - 
 
 
 ### abc178
@@ -476,3 +535,17 @@
   - このときの一番点数が高い問題が最小になるような場合を求める
   - 累積和を求めておき、合計値が目標点を超えた場合にそれまでの値を出力する
   - この際に目標値との差分を除外して出力する
+
+### hhkb2020
+
+- [A - Keyboard](/hhkb2020/a.rs)
+  - 指定された方法で文字列を変更して出力する、
+  - 文字を大文字にしたり小文字のまま出力したり
+  - もっとおしゃれにかけよってかんじの反省
+- [B - Futon](/hhkb2020/b.rs)
+  - 与えられたMapのうち2つ並んで空いている場所をさがして布団をしく
+  - 右だけまたは下だけを見るを繰り返す
+  - 最後の行と列は別で足す
+- [C - Neq Min](/hhkb2020/c.rs)
+  - 使ってはいけない値をHashMapに加えていく、
+  - もしminが使ってはいけないリストに入っていたなら+1して入っていない状態までもっていく
