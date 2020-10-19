@@ -20,6 +20,7 @@
     - [agc028](#agc028)
     - [agc034](#agc034)
     - [agc035](#agc035)
+    - [agc048](#agc048)
   - [abc](#abc)
     - [abc048](#abc048)
     - [abc051](#abc051)
@@ -57,6 +58,7 @@
     - [abc177](#abc177)
     - [abc179](#abc179)
     - [abc178](#abc178)
+    - [abc180](#abc180)
   - [others](#others)
     - [code-festival-2017-quala](#code-festival-2017-quala)
     - [keyence2019](#keyence2019)
@@ -169,6 +171,12 @@
 - [A - XOR Circle](/agc035/a.rs)
   - XORの性質を用いたもの
   - 円形上のラクダに帽子をかぶせられるか
+
+### agc048
+
+- [A - atcoder < S](/agc048/a.rs)
+  - Stringの中に指定した文字が含まれるか探索
+  - はじめがaでそのつぎがそれ以外なら....を考えて説く問題
 
 ## abc
 
@@ -535,6 +543,13 @@
   - 計算で求める式を求め実装する
   - ネックなのは大きくなったら 10^9+7 でmodをとるところ
   - 一番大きなものだけ取っちゃうと符号が-になることを利用してその分 10^9+7 を足して補正する
+
+### abc180
+
+- [A - box](/abc180/a.rs)
+- [B - Various distances](/abc180/b.rs)
+- [C - Cream puff](/abc180/c.rs)
+- [D - Takahashi Unevolved](/abc180/d.rs)
 
 ## others
 
