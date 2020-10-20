@@ -61,6 +61,7 @@
     - [abc180](#abc180)
   - [others](#others)
     - [code-festival-2017-quala](#code-festival-2017-quala)
+    - [CADDi 2018](#caddi-2018)
     - [keyence2019](#keyence2019)
     - [keyence2020](#keyence2020)
     - [nomura2020](#nomura2020)
@@ -558,6 +559,12 @@
 - [B - fLIP](/code-festival-2017-quala/b.rs)
   - オセロ的なひっくり返していくゲーム
   - どちらの列を選択したらいくつひっくり返るかを式にすると解ける
+
+### CADDi 2018
+
+- [C - Product and GCD](/caddi2018/c.rs)
+  - 与えられた数列全部の掛け算した値がわかっているのでそこから数列の最大公約数(GCD)を求める問題
+  - Factor(素因数分解)を求めて数列の数ぶん以上あるものをどんどんかけていけば求まる
 
 ### keyence2019
 
