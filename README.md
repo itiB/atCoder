@@ -7,6 +7,7 @@
 - [atCoder](#atcoder)
   - [commit message](#commit-message)
   - [DPまとめコンテスト](#dpまとめコンテスト)
+    - [typical DP Contest](#typical-dp-contest)
   - [atc](#atc)
     - [atc001](#atc001)
   - [arc](#arc)
@@ -107,6 +108,14 @@
   - i番目のものが重さj以内ならば入れる[n個のもの][重さ]の2次元配列を作る
   - ものを入れれ場合は `max(入れなかった場合の重さ, 入れる前 + 入れるものの重さ)`
   - 参考: https://qiita.com/drken/items/a5e6fe22863b7992efdb
+
+### typical DP Contest
+
+- [A - コンテスト](/typicalDp/a.rs)
+  - コンテストので獲得しうる点数パターンをすべて列挙する問題
+  - 0問正解で0点を初期値として一問目正解した場合、しなかった場合で取りうる点数列挙
+  - 2問目正解したら取りうる点数を足していってーーーを繰り返す
+  - 最後の問題で取りうる点数パターンがすべて並ぶのでいくつが取れるかを数え上げる
 
 ## atc
 
