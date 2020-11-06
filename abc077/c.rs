@@ -11,23 +11,22 @@ fn main() {
     a.push(std::i32::MAX);
     a.push(std::i32::MIN);
     a.sort();
-    b.push(std::i32::MAX);
-    b.push(std::i32::MIN);
-    b.sort();
+    c.push(std::i32::MAX);
+    c.push(std::i32::MIN);
+    c.sort();
+
+    // println!("{:?}", c);
 
     let mut ans = 0;
-    for i in c {
-        // m以降は指定値より大きくなるので見ない
-        let m = binary_search(&b, i);
-        for j in 1..m {
-            // binary_searchで数列の中で指定した値を越えるところがわかる
-            // a[a.len() - 1] = INF が含まれているため消す
-            ans += binary_search(&a, b[j]) - 1;
-        }
+    for i in b {
+        // println!("{}", i);
+        let aa = binary_search(&a, i, terms) - 1;
+        let cc = c.len() - 1 - binary_search(&c, i, terms2);
+        ans += aa * cc;
+        // println!("c {}, len {}", cc, c.len());
     }
     println!("{}", ans);
 }
-
 
 fn terms(num: i32, value: i32) -> bool {
     // 条件をここに作る
@@ -39,7 +38,17 @@ fn terms(num: i32, value: i32) -> bool {
     }
 }
 
-fn binary_search(vec: &[i32], value: i32) -> usize {
+fn terms2(num: i32, value: i32) -> bool {
+    // 条件をここに作る
+    // terms(right) = true になるように
+    if num > value {
+        true
+    } else {
+        false
+    }
+}
+
+fn binary_search<F: Fn(i32, i32) -> bool>(vec: &[i32], value: i32, terms: F) -> usize {
     // 入力はバグらないように前後にINFをいれたソート済みベクタ
     let mut l = 0;
     let mut r = vec.len() - 1;
