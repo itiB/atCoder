@@ -74,6 +74,7 @@
     - [abc181](#abc181)
     - [abc182](#abc182)
   - [others](#others)
+    - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
     - [CADDi 2018](#caddi-2018)
     - [keyence2019](#keyence2019)
@@ -712,6 +713,12 @@
   - 各工程でどこにたどり着くか、各回で一番遠いところはどこかをメモしておくことでOを下げることができる
 
 ## others
+
+### joi2008ho
+
+- [C - ダーツ](/joi2008ho/c.rs)
+  - 4本までダーツを投げて得点Mを越えない最大得点を計算する問題
+  - 2本総当たり順列を作って各値についてもう2本選んで最もMに近くなるものを2分探索で求める
 
 ### code-festival-2017-quala
 
