@@ -6,9 +6,11 @@ fn main() {
         b: usize,
     }
 
-    if (10 * a) / 100 == (8 * b) / 100 {
-        println!("{}", a * 100 / 8);
-    } else {
-        println!("-1");
+    for i in 0..10001 {
+        if i * 8 / 100 == a && i * 10 / 100 == b {
+            println!("{}", i);
+            return
+        }
     }
+    println!("-1");
 }
