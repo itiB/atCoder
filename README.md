@@ -54,6 +54,7 @@
     - [abc146](#abc146)
     - [abc148](#abc148)
     - [abc149](#abc149)
+    - [abc150](#abc150)
     - [abc153](#abc153)
     - [abc155](#abc155)
     - [abc156](#abc156)
@@ -430,6 +431,12 @@
 
 - [D - Prediction and Restriction](/abc149/d.rs)
   - じゃんけんバトル、特定回数前と同じ手を出すことはできない
+
+### abc150
+
+- [C - Count Order](/abc150/c.rs)
+  - 数列を入れ替えて特定の数列になった大きさを調べる
+  - Permutation の使い方 Itertools を使えるようにすると使える
 
 ### abc153
 
