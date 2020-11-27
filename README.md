@@ -417,6 +417,9 @@
 - [B - 81](/abc144/b.rs)
   - Nを 1~9 の a, b の積で表せるかを調べる問題
   - forで回して総当たりすればOK
+- [C - Walk on Multiplication Table](/abc144/c.rs)
+  - a * b = n となる a + b - 2 のうち最小のものを求める問題
+  - n ^ 12 なので aを a*a < nの範囲において b = n/aで求めることによって O(n^6)で探索できる
 
 ### abc146
 
