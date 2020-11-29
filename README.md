@@ -441,6 +441,10 @@
 
 ### abc150
 
+- [A - 500 Yen Coins](/abc150/a.rs)
+  - K枚500円玉を持っているときの総額がx円以上か調べる
+- [B - Count ABC](/abc140/b.rs)
+  - 文字列の中に'ABC' の文字列がいくつ含まれているか調べる
 - [C - Count Order](/abc150/c.rs)
   - 数列を入れ替えて特定の数列になった大きさを調べる
   - Permutation の使い方 Itertools を使えるようにすると使える
