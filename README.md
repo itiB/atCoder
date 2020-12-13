@@ -87,6 +87,7 @@
     - [abc182](#abc182)
     - [abc183](#abc183)
     - [abc184](#abc184)
+    - [abc185](#abc185)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -851,6 +852,14 @@
   - 何回で目的の場所まで移動できるか
   - 1つ1つ場合分けをしっかりできるかの問題
   - 斜め移動は飛ばすところがいくつかでてくるからそこはmodが一致するか次第でわかる
+
+### abc185
+
+- [A - ABC Preparation](/abc185/a.rs)
+- [B - Smartphone Addiction](/abc185/b.rs)
+- [C - Duodecim Ferra ](/abc185/c.rs)
+- [D - Stamp](/abc185/d.rs)
+- [E - Sequence Matching](/abc185/e.rs)
 
 ## others
 
