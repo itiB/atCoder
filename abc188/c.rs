@@ -17,11 +17,11 @@ fn main() {
             ll = i + 1;
         }
     }
-    for i in half..1<<n - 1 {
-        if r < a[i] {
-            r = a[i];
-            rr = i + 1;
+    for j in half..a.len() {
+        if r < a[j] {
+            r = a[j];
+            rr = j + 1;
         }
     }
-    println!("{}", if l > r { ll } else { rr });
+    println!("{}", if l > r { rr } else { ll });
 }
