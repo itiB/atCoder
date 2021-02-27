@@ -88,6 +88,7 @@
     - [abc183](#abc183)
     - [abc184](#abc184)
     - [abc185](#abc185)
+    - [abc192](#abc192)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -860,6 +861,16 @@
 - [C - Duodecim Ferra ](/abc185/c.rs)
 - [D - Stamp](/abc185/d.rs)
 - [E - Sequence Matching](/abc185/e.rs)
+
+### abc192
+
+- [A - Discount](/abc192/a.rs)
+  - 何割引きか計算する問題
+- [B - Play Snuke](/abc192/a.rs)
+  - どの店に行くのが一番安くものが買えるか調べる問題
+- [C - Unexpressed](/abc192/a.rs)
+  - 整数Nのうちa^bで表せない値の数を調べる問題
+  - a^bで表せないものがすくないことを生かしてHashSet使っていい
 
 ## others
 
