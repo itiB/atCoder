@@ -9,8 +9,9 @@ fn main() {
     }
 
     let mut map: HashMap<usize, usize> = HashMap::new();
+    let m = min(n, 8);
 
-    for i in 1..1 << n {
+    for i in 1..1usize << m {
         let mut sum = 0;
         for j in 0..n {
             if i >> j & 1 == 1 {
@@ -23,15 +24,14 @@ fn main() {
             let val = map.get(&(sum)).unwrap(); // 過去のその数値になったやつ
             let (c1, v1) = print_bits(*val, n);
             let (c2, v2) = print_bits(i, n);
-            for n in 0..min(c1, c2) {
-                if v1[n] != v2[n] {
+            for a in 0..min(c1, c2) {
+                if v1[a] != v2[a] {
                     print_ans(c1, v1, c2, v2);
                     return
                 }
             }
-        } else {
-            map.insert(sum, i);
         }
+        map.insert(sum, i);
     }
     println!("No");
 }
