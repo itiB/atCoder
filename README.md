@@ -94,6 +94,7 @@
     - [abc194](#abc194)
     - [abc196](#abc196)
     - [abc197](#abc197)
+    - [abc198](#abc198)
     - [abc200](#abc200)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
@@ -909,6 +910,14 @@
   - 3文字与えられて入れ替える
 - [B - Visibility](/abc197/b.rs)
   - マス目が与えられて見える範囲を答える
+
+### abc198
+
+- [A - Div](/abc198/a.rs)
+  - お菓子の分け方の問題
+- [B - Palindrome with leading zeros](/abc198/b.rs)
+  - 前に0をいくつかつけて回分にできるか調べる問題
+  - うしろの0をとってから回文かしらべればいい
 
 ### abc200
 
