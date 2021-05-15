@@ -953,6 +953,7 @@
 - [B - Do you know the second highest mountain?](/abc201/b.rs)
   - 二個目に大きい数値を調べる
   - BTreeMapに入れて求めた
+  - ベクタをタプルのキーでソートするやつで書き直してある
 
 ## others
 
