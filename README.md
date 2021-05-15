@@ -97,6 +97,7 @@
     - [abc197](#abc197)
     - [abc198](#abc198)
     - [abc200](#abc200)
+    - [abc201](#abc201)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -944,6 +945,14 @@
   - 8個目までをbit全探索していけばOK
   - dp復元する実装があるらしい...
 
+### abc201
+
+- [A - Tiny Arithmetic Sequence](/abc201/a.rs)
+  - 等差数列にするにはどうしたらいいか
+  - 小さい順に並べるか、総和がどれかの3倍になる
+- [B - Do you know the second highest mountain?](/abc201/b.rs)
+  - 二個目に大きい数値を調べる
+  - BTreeMapに入れて求めた
 
 ## others
 
