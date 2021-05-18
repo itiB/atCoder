@@ -97,6 +97,7 @@
     - [abc196](#abc196)
     - [abc197](#abc197)
     - [abc198](#abc198)
+    - [abc199](#abc199)
     - [abc200](#abc200)
     - [abc201](#abc201)
   - [others](#others)
@@ -937,6 +938,11 @@
 - [B - Palindrome with leading zeros](/abc198/b.rs)
   - 前に0をいくつかつけて回分にできるか調べる問題
   - うしろの0をとってから回文かしらべればいい
+
+### abc199
+
+- [B - Intersection](/abc199/b.rs)
+  - 2つの数列のうち一番大きい数字と小さい数字をとって間を求める問題
 
 ### abc200
 
