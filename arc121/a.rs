@@ -1,77 +1,34 @@
 use proconio::input;
-use std::cmp::{min, max};
+use std::cmp::max;
+use std::cmp::Reverse;
 
 fn main() {
     input! {
         n: usize,
-        xy: [(i64, i64); n]
+        mut xy: [(i64, i64); n]
     }
 
-    let mut max_x1 = -1_000_000_001;
-    let mut max_x2 = -1_000_000_001;
-    let mut min_x1 = 1_000_000_001;
-    let mut min_x2 = 1_000_000_001;
-    let mut max_y1 = -1_000_000_001;
-    let mut max_y2 = -1_000_000_001;
-    let mut min_y1 = 1_000_000_001;
-    let mut min_y2 = 1_000_000_001;
+    let mut ids: Vec<(i64, i64)> = Vec::new();
+    xy.sort_by_key(|a| a.0);
+    ids.push(xy[0]);
+    ids.push(xy[1]);
+    if xy.len() > 2 { ids.push(xy[xy.len() - 1]) };
+    if xy.len() > 3 { ids.push(xy[xy.len() - 2]) };
 
-    let mut pass = false;
+    let last = max(xy.len() - 2, 2);
+    let mut v: Vec<(i64, i64)> = xy.drain(2..last).collect();
+    v.sort_by_key(|a| a.1);
+    if v.len() > 0 { ids.push(v[0]) };
+    if v.len() > 1 { ids.push(v[1]) };
+    if v.len() > 2 { ids.push(v[v.len() - 1]) };
+    if v.len() > 3 { ids.push(v[v.len() - 2]) };
 
-    for (x, y) in &xy {
-        max_x1 = max(*x, max_x1);
-        min_x1 = min(*x, min_x1);
-        max_y1 = max(*y, max_y1);
-        min_y1 = min(*y, min_y1);
-    }
-    let mut min_flagx = false;
-    let mut max_flagx = false;
-    let mut min_flagy = false;
-    let mut max_flagy = false;
-    for (x, y) in xy {
-        if x <= max_x1 {
-            if x < max_x1 || max_flagx == true {
-                max_x2 = max(max_x2, x);
-            }
-            if x == max_x1 {
-                max_flagx = true;
-            }
-        }
-        if x >= min_x1 {
-            if x > min_x1 || min_flagx == true {
-                min_x2 = min(min_x2, x);
-            }
-            if x == min_x1 {
-                min_flagx = true;
-            }
-        }
-
-        if y <= max_y1 {
-            if y < max_y1 || max_flagy == true {
-                max_y2 = max(max_y2, y);
-            }
-            if y == max_y1 {
-                max_flagy = true;
-            }
-        }
-        if y >= min_y1 {
-            if y > min_y1 || min_flagy == true {
-                min_y2 = min(min_y2, y);
-            }
-            if y == min_y1 {
-                min_flagy = true;
-            }
+    let mut ans = Vec::new();
+    for i in 0..ids.len() {
+        for j in i + 1..ids.len() {
+            ans.push(max((ids[i].0 - ids[j].0).abs(), (ids[i].1 - ids[j].1).abs()));
         }
     }
-    let mut v = Vec::new();
-    v.push((max_x1 - min_x2).abs());
-    v.push((max_x2 - min_x1).abs());
-    v.push((max_x1 - min_x1).abs());
-    v.push((max_y1 - min_y2).abs());
-    v.push((max_y2 - min_y1).abs());
-    if max_x1 != max_y1 {
-        v.push((max_y1 - min_y1).abs());
-    }
-    v.sort();
-    println!("{}", v[v.len() - 2]);
+    ans.sort_by_key(|&x| Reverse(x));
+    println!("{}", ans[1]);
 }
