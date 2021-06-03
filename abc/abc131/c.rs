@@ -9,7 +9,7 @@ fn main() {
     }
 
     println!("{}",
-        (b + b/lcm(c, d) - b/c - b/d) - ((a-1) + (a-1)/lcm(c, d) - (a-1)/c - (a-1)/d)
+        (b - a + 1) - (b / c - (a - 1) / c) - (b / d - (a - 1) / d) + (b / lcm(d, c) - (a - 1) / lcm(d, c))
     );
 }
 
