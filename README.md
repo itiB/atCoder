@@ -107,6 +107,7 @@
     - [abc200](#abc200)
     - [abc201](#abc201)
     - [abc203](#abc203)
+    - [abc204](#abc204)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1037,6 +1038,18 @@
   - 2分探索はO(log(maxA))
   - マス目の中の値を求めるのと2分探索ができないと解けない問題
 - [E - White Pawn](/abc/abc203/e.rs)
+
+### abc204
+
+- [A - Rock-paper-scissors](/abc/abc204/a.rs)
+  - じゃんけんして相子になる手を選ぶ問題
+- [B - Nuts](/abc/abc204/b.rs)
+  - 一定の値を超えた樹からのみ木の実を収穫し、合計を出す
+- [C - Tour](/abc/abc204/c.rs)
+  - 国と国をつなぐ道が与えられるのでスタートとゴールの組み合わせを出す問題
+  - TLEでなやんでいたけどこれメモリオーバーもTLEとして出力されるらしい
+  - HashmapなんてCloneしちゃだめ
+
 ## others
 
 ### joi2008ho
