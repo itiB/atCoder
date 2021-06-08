@@ -1,23 +1,26 @@
 use proconio::input;
+use std::char;
+use std::collections::VecDeque;
 
 fn main() {
     input! {
-        mut n: i128,
+        mut n: i64,
     }
-    let mut name = Vec::new();
-    loop {
-        n -= 1;
-        name.push(n % 26);
-        n /= 26;
-        if n == 0 { break }
-    }
-    for c in (0..name.len()).rev() {
-        print!("{}", decoder(name[c]))
-    }
-    println!("");
-}
 
-fn decoder(input: i128) -> char {
-    let a = 'a' as u8;
-    (a + input as u8) as char
+    let mut ans = VecDeque::new();
+
+    while n > 0 {
+        if n % 26 == 0 {
+            ans.push_front('z');
+            n = n / 26 - 1;
+        } else {
+            ans.push_front(char::from_digit((9 + n % 26) as u32, 36).unwrap());
+            n /= 26;
+        }
+    }
+
+    for a in ans {
+        print!("{}", a);
+    }
+    println!();
 }
