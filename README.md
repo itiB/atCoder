@@ -112,6 +112,7 @@
     - [abc201](#abc201)
     - [abc203](#abc203)
     - [abc204](#abc204)
+    - [abc205](#abc205)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1083,6 +1084,17 @@
   - 国と国をつなぐ道が与えられるのでスタートとゴールの組み合わせを出す問題
   - TLEでなやんでいたけどこれメモリオーバーもTLEとして出力されるらしい
   - HashmapなんてCloneしちゃだめ
+
+### abc205
+
+- [A - kcal](/abc/abc205/a.rs)
+  - カロリーを求める問題
+- [B - Permutation Check](/abc/abc205/b.rs)
+  - 与えられた数列から順列がつくれるか調べる問題
+- [C - POW](/abc/abc205/c.rs)
+  - 与えられた数をもとに乗算の大小を求める問題
+  - Cが2の倍数かで場合分けをして適切に処理する
+- [D - Kth Excluded](/abc/abc205/d.rs)
 
 ## others
 
