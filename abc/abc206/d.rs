@@ -8,46 +8,20 @@ fn main() {
         a: [usize; n],
     }
 
-    let mut map: HashMap<usize, HashSet<usize>> = HashMap::new();
+    let mut uf = UnionFind::new(2_000_001);
     let mut i = 0;
     while i < n - 1 - i {
-        // println!("{} {}", i, n - 1 - i);
-        if a[i] != a[n - 1 - i] {
-            if !map.contains_key(&a[i]) {
-                map.insert(a[i], HashSet::new());
-            }
-            map.get_mut(&a[i]).unwrap().insert(a[n - 1 - i]);
-            if !map.contains_key(&a[n - 1 - i]) {
-                map.insert(a[n - 1 - i], HashSet::new());
-            }
-            map.get_mut(&a[n - 1 - i]).unwrap().insert(a[i]);
-        }
+        uf.unite(a[i], a[n - 1 - i]);
         i += 1;
     }
 
-    let mut leng = 0;
-    let mut m_key = 0;
-    for (key, val) in &map {
-        if val.len() > leng {
-            leng = val.len();
-            m_key = *key;
+    let mut ans = 0;
+    for i in uf.rank {
+        if i > 0 {
+            ans += 1;
         }
     }
-    if m_key > 0 {
-        let mut changed: HashSet<usize> = map.get(&m_key).unwrap().clone();
-
-        for (key, val) in &map {
-            if key != &m_key && !changed.contains(key) {
-                changed.insert(*key);
-                for v in val {
-                    changed.insert(*v);
-                }
-            }
-        }
-        println!("{}", changed.len());
-    } else {
-        println!("0");
-    }
+    println!("{}", ans);
 }
 
 
