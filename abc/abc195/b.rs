@@ -5,21 +5,21 @@ fn main() {
     input! {
         a: usize,
         b: usize,
-        w: usize
+        w: usize,
     }
 
-    let mut mikan_min = 1_000_000_000;
-    let mut mikan_max = 0;
+    let mut mi = 1_000_000_001;
+    let mut ma = 0;
 
-    for n in 1..=1_000_000 {
-        if a * n <= 1000 * w && 1000 * w <= b * n {
-            mikan_min = min(mikan_min, n);
-            mikan_max = max(mikan_max, n);
+    for i in 0..1_000_000 {
+        if a * i <= w * 1000 && w * 1000 <= b * i {
+            ma = max(ma, i);
+            mi = min(mi, i);
         }
     }
-    if mikan_max == 0 {
-        println!("UNSATISFIABLE");
+    if mi != 1_000_000_001 {
+        println!("{} {}", mi, ma);
     } else {
-        println!("{} {}", mikan_min, mikan_max);
+        println!("UNSATISFIABLE");
     }
 }
