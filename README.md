@@ -122,6 +122,7 @@
     - [abc205](#abc205)
     - [abc206](#abc206)
     - [abc207](#abc207)
+    - [abc208](#abc208)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1189,6 +1190,17 @@
   - 与えられた座標たちを回転させて別の座標たちと一致する形になるかを調べる問題
   - WAった
   - Vec<(usize,usize)>をコピーして値を変形して別のVec作ったりとかできるようになった
+
+### abc208
+
+- [A - Rolling Dice](/abc/abc208/a.rs)
+  - さいころを振って特定の数字ができるか求める問題
+  - 最大だけでなく最小もあることに注意
+- [B - Factorial Yen Coin](/abc/abc208/b.rs)
+  - 1!, 2!... が流通する世界でk円をはらうには最小で何枚のコインが必要か調べる
+  - 1円をたくさんあつめていくつかを2!に変えて...ってする手や最大の値から調べていく手、いろいろ
+- [C - Fair Candy Distribution](/abc/abc208/c.rs)
+  - おかしを配っていってのこりを特定の数値以下のひとに配る
 
 ## others
 
