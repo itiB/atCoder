@@ -123,6 +123,7 @@
     - [abc206](#abc206)
     - [abc207](#abc207)
     - [abc208](#abc208)
+    - [abc210](#abc210)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1201,6 +1202,16 @@
   - 1円をたくさんあつめていくつかを2!に変えて...ってする手や最大の値から調べていく手、いろいろ
 - [C - Fair Candy Distribution](/abc/abc208/c.rs)
   - おかしを配っていってのこりを特定の数値以下のひとに配る
+
+### abc210
+
+- [A - Cabbages](/abc/abc210/a.rs)
+  - N個キャベツを買うのでうまく条件分岐させて割引を適用する
+- [B - Bouzu Mekuri](/abc/abc210/b.rs)
+  - 交互に順番がくるので先に1をひくプレイヤーを調べる問題
+- [C - Colorful Candies](/abc/abc210/c.rs)
+  - 特定の範囲内のキャンディの種類の数を調べる問題
+  - 差分をとって追加と削除を行うことで高速化する
 
 ## others
 
