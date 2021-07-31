@@ -125,6 +125,7 @@
     - [abc207](#abc207)
     - [abc208](#abc208)
     - [abc210](#abc210)
+    - [abc212](#abc212)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1227,6 +1228,18 @@
   - 2つの駅を作ってコストが低く作れるところを探す問題
   - 特定の点と特定の点をつなげる必要があるならそれはDPでは？？？？？
   - 南東にしか2つ目の駅がないパターンと南西にしかないパターンを作って2回回せばいい
+
+### abc212
+
+- [A - Alloy](/abc/abc212/a.rs)
+- [B - Weak Password](/abc/abc212/b.rs)
+  - 文字列がすべて一緒、または循環する数だったら弱いとする。
+  - 文字列で読んだ値を数値にしていたりする u2c
+- [C - Min Difference](/abc/abc212/c.rs)
+  - 2つの数列のなかで差分の小さな組み合わせを求める問題
+  - どちらもソートして前後だけを比較すれば計算量を抑えられる
+- [D - Querying Multiset](/abc/abc212/d.rs)
+  - BTreemapに詳しくなった、WAったけど
 
 ## others
 
