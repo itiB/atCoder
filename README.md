@@ -1240,6 +1240,8 @@
   - どちらもソートして前後だけを比較すれば計算量を抑えられる
 - [D - Querying Multiset](/abc/abc212/d.rs)
   - BTreemapに詳しくなった、WAったけど
+  - 重複する可能性がある + 最大 or 最小がわかればいい -> BinaryHeap
+  - 最小を求めるときはReverseをつけてpushする必要がある。
 
 ## others
 

@@ -1,12 +1,13 @@
 use proconio::input;
-use std::collections::BTreeSet;
+use std::collections::BinaryHeap;
+use std::cmp::Reverse;
 
 fn main() {
     input! {
         q: i128,
     }
 
-    let mut bs = BTreeSet::new();
+    let mut bs = BinaryHeap::new();
     let mut diff = 0;
 
     for _ in 0..q {
@@ -18,7 +19,7 @@ fn main() {
                 input! {
                     x: i128,
                 }
-                bs.insert(x - diff);
+                bs.push(Reverse(x - diff));
             },
             2 => {
                 input! {
@@ -27,9 +28,8 @@ fn main() {
                 diff += x;
             },
             3 => {
-                let first = bs.iter().next().unwrap().clone();
-                println!("{}", first + diff);
-                bs.remove(&(first));
+                let Reverse(x) = bs.pop().unwrap();
+                println!("{}", x + diff);
             },
             _ => {},
         }
