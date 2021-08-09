@@ -1,45 +1,40 @@
 use proconio::input;
-use proconio::marker::Chars;
+use std::collections::VecDeque;
 
 fn main() {
     input! {
-        n: Chars,
+        n: usize,
+        k: usize,
+        t: [[usize; n]; n]
     }
 
-    let mut num = Vec::new();
-    let mut sum = 0;
-    for c in n {
-        let u = c2u(c);
-        num.push(u % 3);
-        sum += u;
-    }
-    if sum % 3 == 0 {
-        println!("0");
-    } else if sum % 3 == 1 {
-        if num.contains(&1) && num.len() > 1 {
-            println!("1");
-        } else {
-            let count = num.iter().fold(0, |sum, x| sum + if x == &2 { 1 } else { 0 });
-            if count > 1 && num.len() > 2 {
-                println!("2");
-            } else {
-                println!("-1");
-            }
-        }
-    } else if sum % 3 == 2 {
-        if num.contains(&2) && num.len() > 1 {
-            println!("1");
-        } else {
-            let count = num.iter().fold(0, |sum, x| sum + if x == &1 { 1} else { 0 });
-            if count > 1 && num.len() > 2 {
-                println!("2");
-            } else {
-                println!("-1");
-            }
-        }
-    }
+    // 1 -> x1 -> x2 ... -> 1 の順番
+    let mut chosen = vec![false; n];
+    let mut permutation = VecDeque::new();
+    println!("{}", search(&mut permutation, &mut chosen, 0, &t, k));
 }
 
-fn c2u(c: char) -> usize {
-    c as usize - '0' as usize
+fn search(permutation: &mut VecDeque<usize>, chosen: &mut Vec<bool>, mut ans: usize, t: &Vec<Vec<usize>>, k: usize) -> usize {
+    // 0の分を除いておく
+    if permutation.len() == chosen.len() - 1 {
+        let mut p = permutation.clone();
+        p.push_back(0);
+        let mut past = 0;
+        let mut s = 0;
+        while let Some(next) = p.pop_front() {
+            s += t[past][next];
+            past = next;
+        }
+        if s == k { ans += 1 }
+    } else {
+        for i in 1..chosen.len() {
+            if chosen[i] { continue }
+            chosen[i] = true;
+            permutation.push_back(i);
+            ans = search(permutation, chosen, ans, t, k);
+            chosen[i] = false;
+            permutation.pop_back();
+        }
+    }
+    return ans
 }
