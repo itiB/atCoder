@@ -1,35 +1,37 @@
 use proconio::input;
+use std::cmp::max;
 
 fn main() {
     input! {
         n: usize,
-        m: i32,
-        q: i32,
-        abcd: [(usize, usize, i32, i32); q],
+        m: usize,
+        q: usize,
+        mut abcd: [(usize, usize, usize, usize); q]
     }
-    let mut ga = vec!{0; n};
-    let ans = dfs(&abcd, &mut ga, 1, m, 0);
-    println!("{}", ans);
+
+    // A(len(10))を全探索する
+    let mut a = vec![1];
+
+    println!("{}", dfs(&mut a, 0, &abcd, n, m));
 }
 
-fn dfs(abcd: &Vec<(usize, usize, i32, i32)>, ga: &mut Vec<i32>, lower: i32, m: i32, i: usize) -> i32 {
-    if ga.len() == i {
-        // 長さnまで到達したら終了，得点計算
-        let mut score = 0;
-        for &(a, b, c, d) in abcd {
-            // 配列アクセスのため0スタートに合わせる
-            if ga[b - 1] - ga[a - 1] == c {
-                score += d;
+fn dfs(a: &mut Vec<usize>, mut ans: usize, abcd: &Vec<(usize, usize, usize, usize)>, n: usize, m: usize) -> usize {
+    if a.len() == n {
+        // check
+        let mut tmp = 0;
+        for (aa, b, c, d) in abcd {
+            if a[*b - 1] - a[*aa - 1] == *c {
+                tmp += d;
             }
         }
-        return score;
+        ans = max(ans, tmp);
+    } else {
+        let last_a = a[a.len() - 1];
+        for next in last_a..=m {
+            a.push(next);
+            ans = dfs(a, ans, abcd, n, m);
+            a.pop();
+        }
     }
-    let mut ans = 0;
-    // 最後の桁を"1つ前の値" ~ 最大値mまで変化させる
-    for lastnum in lower..=m {
-        ga[i] = lastnum;
-        let t = dfs(abcd, ga, lastnum, m, i + 1);
-        ans = if ans > t { ans } else { t };
-    }
-    ans
+    return ans
 }
