@@ -87,6 +87,7 @@
     - [abc157](#abc157)
     - [abc158](#abc158)
     - [abc159](#abc159)
+    - [abc161](#abc161)
     - [abc162](#abc162)
     - [abc164](#abc164)
     - [abc165](#abc165)
@@ -748,6 +749,17 @@
   - N個のボールの組み合わせを数え上げる問題
   - HashMapに各値がいくつ存在したかを記録
   - マップからValueのイテレータをとってすべてにfoldで足し算を行うおしゃれテクを身に着けた
+
+### abc161
+
+- [A - ABC Swap](/abc/abc161/a.rs)
+  - はこの中身を入れ替えた結果を出力する
+- [B - Popular Vote](/abc/abc161/b.rs)
+  - 人気商品をM個選べるか調べる問題。
+  - 商品の得た得票数順にソートしてm-1番目の値が選ばれるかを調べる
+- [C - Replacing Integer](/abc/abc161/c.rs)
+- [D - Lunlun Number](/abc/abc161/d.rs)
+  - Backtrackingを用いて前後の値-1 ~ +1の値を連結していってLunLunナンバーを作っていく。
 
 ### abc162
 
