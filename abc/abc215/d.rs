@@ -8,31 +8,46 @@ fn main() {
         a: [usize; n]
     }
 
+    let mut map = HashMap::new();
+    for aa in a {
+        factor(aa, &mut map);
+    }
+    let mut ans = vec![1; m + 1];
+    ans[0] = 0;
+    for k in map.keys() {
+        if *k <= m && ans[*k] == 1 {
+            for i in (0..=m).step_by(*k) {
+                ans[i] = 0;
+            }
+        }
+    }
+    let s: usize = ans.iter().sum();
+    println!("{}", s);
+    for i in 1..ans.len() {
+        if ans[i] == 1 {
+            println!("{}", i);
+        }
+    }
 }
 
-fn factor(num: i64) -> HashMap::<i64, i64> {
-    let mut map = HashMap::new();
-    let mut n = num;
 
+fn factor(num: usize, map: &mut HashMap::<usize, usize>) {
+    let mut n = num;
     let mut i = 2;
     loop {
-        if n == 1 { 
-            // 割り切れたら抜ける
+        if n == 1 {
             break;
         }
         if i * i > num {
-            // n^(1/2)まで試す
-            // 残っていたら追加して抜ける
             map.insert(n, 1);
             break;
         }
         if n % i == 0 {
-            // Mapに無ければ追加、あれば1増やす
             *map.entry(i).or_insert(0) += 1;
             n /= i;
             continue;
         }
         i += 1;
     }
-    map
 }
+
