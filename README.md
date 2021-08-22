@@ -129,6 +129,7 @@
     - [abc208](#abc208)
     - [abc210](#abc210)
     - [abc212](#abc212)
+    - [abc215](#abc215)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1268,6 +1269,18 @@
   - BTreemapに詳しくなった、WAったけど
   - 重複する可能性がある + 最大 or 最小がわかればいい -> BinaryHeap
   - 最小を求めるときはReverseをつけてpushする必要がある。
+
+### abc215
+
+- [A - Your First Judge](/abc/abc215/a.rs)
+  - 文字列入力をできるか、一致判定
+- [B - log2(N)](/abc/abc215/b.rs)
+  - 2^k <= n となる最大の値を探す
+- [C - One More aab aba baa](/abc/abc215/c.rs)
+  - 与えられた文字列を並び変えてできる文字列(Permutation)を全列挙する
+- [D - Coprime 2](/abc/abc215/d.rs)
+  - 与えられた数字たち全部と互いに素な数字を列挙する
+  - まずは与えられた数字を素因数分解して要素を調べてエラトステネスの篩にかける
 
 ## others
 
