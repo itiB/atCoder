@@ -7,8 +7,6 @@
 - [atCoder](#atcoder)
   - [commit message](#commit-message)
   - [LESSON](#lesson)
-  - [DPまとめコンテスト](#dpまとめコンテスト)
-  - [typical DP Contest](#typical-dp-contest)
   - [atc](#atc)
     - [atc001](#atc001)
   - [arc](#arc)
@@ -159,7 +157,7 @@
 ## LESSON
 
 - [DPまとめコンテスト](lesson/README.md#DPまとめコンテスト)
-- [typical_DP_Contest](lesson/README.md#typical_DP_Contest)
+- [typical DP Contest](lesson/README.md#typical-DP-Contest)
 - [競プロ典型90問](lesson/README.md#競プロ典型90問)
 
 ## atc
