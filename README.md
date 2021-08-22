@@ -157,7 +157,7 @@
 ## LESSON
 
 - [DPまとめコンテスト](lesson/README.md#DPまとめコンテスト)
-- [typical DP Contest](lesson/README.md#typical-DP-Contest)
+- [typical DP Contest](lesson/README.md#typical-dp-contest)
 - [競プロ典型90問](lesson/README.md#競プロ典型90問)
 
 ## atc
