@@ -6,8 +6,9 @@
 
 - [atCoder](#atcoder)
   - [commit message](#commit-message)
+  - [LESSON](#lesson)
   - [DPまとめコンテスト](#dpまとめコンテスト)
-    - [typical DP Contest](#typical-dp-contest)
+  - [typical DP Contest](#typical-dp-contest)
   - [atc](#atc)
     - [atc001](#atc001)
   - [arc](#arc)
@@ -155,36 +156,11 @@
 - AC: <問題名>
   - コンテスト後にACしたものを書く
 
-## DPまとめコンテスト
+## LESSON
 
-- [A - Frog 1](/dp/a.rs)
-  - dpを用いる問題初心者編
-  - どこから足場がくるかをもとにループを回す
-- [B - Frog 2](/dp/b.rs)
-  - aでやった内容をもとに今度はdpを求める範囲を決めたもの
-  - 今のところからいくつ前までは計算対象に入るから~~~でdpを作る
-- [C - Vacation](/dp/c.rs)
-  - 3択を選んでいって最大となる組み合わせを探す問題
-  - 1日進むたびにどの選択肢からきたものがそれぞれのルートで最大の幸福値を得られるかを記録するDP
-- [D - Knapsack 1](/dp/d.rs)
-  - ナップサックdp
-  - どの荷物を入れれば重さ以内で最大の価値を作ることができるか
-  - i番目のものが重さj以内ならば入れる[n個のもの][重さ]の2次元配列を作る
-  - ものを入れれ場合は `max(入れなかった場合の重さ, 入れる前 + 入れるものの重さ)`
-  - 参考: https://qiita.com/drken/items/a5e6fe22863b7992efdb
-- [F - LCS](/dp/f.rs)
-  - 部分文字列を求める問題、2次元のDPを作る
-  - 一致する文字な場合は前のDP(x, yそれぞれのDP)+1
-  - 逆にたどる時は一致する文字列が着たら斜めに戻る
-  - それ以外の時は左に戻ってチェック、上にいってチェックを繰り返す
-
-### typical DP Contest
-
-- [A - コンテスト](/typicalDp/a.rs)
-  - コンテストので獲得しうる点数パターンをすべて列挙する問題
-  - 0問正解で0点を初期値として一問目正解した場合、しなかった場合で取りうる点数列挙
-  - 2問目正解したら取りうる点数を足していってーーーを繰り返す
-  - 最後の問題で取りうる点数パターンがすべて並ぶのでいくつが取れるかを数え上げる
+- [DPまとめコンテスト](lesson/README.md#DPまとめコンテスト)
+- [typical_DP_Contest](lesson/README.md#typical_DP_Contest)
+- [競プロ典型90問](lesson/README.md#競プロ典型90問)
 
 ## atc
 
