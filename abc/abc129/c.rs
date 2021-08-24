@@ -7,21 +7,17 @@ fn main() {
     input! {
         n: usize,
         m: usize,
-        mut a: [usize; m],
+        a: [usize; m]
     }
+    let a_set: HashSet<usize> = a.into_iter().collect();
+    let mut dp = vec![0; n+1];
 
-    let mut map = vec![0; n + 1];
-    let hash: HashSet<usize> = a.into_iter().collect();
-
-    map[0] = 1;
-    if !hash.contains(&1) {
-        map[1] = 1;
-    }
+    if !a_set.contains(&0) { dp[0] = 1; }
+    if !a_set.contains(&1) { dp[1] = 1; }
 
     for i in 2..=n {
-        if !hash.contains(&i) {
-            map[i] = (map[i - 1] + map[i - 2]) % MOD;
-        }
+        dp[i] = (dp[i - 1] + dp[i - 2]) % MOD;
+        if a_set.contains(&i) { dp[i] = 0; }
     }
-    println!("{}", map[map.len() - 1]);
+    println!("{}", dp[n]);
 }
