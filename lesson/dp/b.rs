@@ -1,29 +1,22 @@
 use proconio::input;
 use std::cmp::min;
+const MAX: i64 = 1_000_000_001;
 
 fn main() {
     input! {
         n: usize,
         k: usize,
-        h: [i32; n],
+        h: [i64; n]
     }
 
-    println!("{}", dp(n, k, &h));
-}
-
-fn dp(n: usize, k: usize, h: &[i32]) -> usize {
-    let mut dp = vec![0; n];
-
+    let mut dp = vec![MAX; n];
+    dp[0] = 0;
     for i in 1..n {
-        // dpを求めるスタート地点を設定
-        let start = if i <= k { 0 } else { i - k };
-
-        let mut minimal = std::i32::MAX;
-        for j in start..i {
-            // カエルが飛べるなかでdpが最も低くなるところを探す
-            minimal = min(minimal, dp[j] + (h[i] - h[j]).abs());
+        for j in 0..=k {
+            if i >= j {
+                dp[i] = min(dp[i], dp[i-j]+(h[i] - h[i-j]).abs());
+            }
         }
-        dp[i] = minimal;
     }
-    dp[n - 1] as usize
+    println!("{}", dp[n-1]);
 }
