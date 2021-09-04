@@ -1296,7 +1296,10 @@
   - 文字列の順番を適切に入れ替えるだけ
 - [D - Cutting Woods](/abc/abc217/d.rs)
   - 必死にヒープ木をかくもTLEった。平衡2分木にすれば良かったらしいがWAったので諦め
-  - BTreeで指定した値以上の値を取得する方法があるらしい...
+  - BTreeSetで指定した値以上の値を取得する方法があるらしい...
+    - xよりも大きな(小さな)値の一つ目を取れる
+      - `let r = s.range(x..).next().unwrap();`
+      - `let l = s.range(..x).rev().next().unwrap();`
 
 ## others
 
