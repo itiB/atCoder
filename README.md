@@ -132,6 +132,7 @@
     - [abc211](#abc211)
     - [abc212](#abc212)
     - [abc215](#abc215)
+    - [abc217](#abc217)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1282,6 +1283,20 @@
 - [D - Coprime 2](/abc/abc215/d.rs)
   - 与えられた数字たち全部と互いに素な数字を列挙する
   - まずは与えられた数字を素因数分解して要素を調べてエラトステネスの篩にかける
+
+### abc217
+
+- [A - Lexicographic Order](/abc/abc217/a.rs)
+  - 文字列を辞書順にする、
+  - もともとの順番と変わっていたら出力する
+- [B - AtCoder Quiz](/abc/abc217/b.rs)
+  - 4つの文字列のなかで出現していない文字列を調べる問題
+  - あらかじめ文字列列をつくって置いて出現したらDeleteするとかでもよかったかも...
+- [C - Inverse of Permutation](/abc/abc217/c.rs)
+  - 文字列の順番を適切に入れ替えるだけ
+- [D - Cutting Woods](/abc/abc217/d.rs)
+  - 必死にヒープ木をかくもTLEった。平衡2分木にすれば良かったらしいがWAったので諦め
+  - BTreeで指定した値以上の値を取得する方法があるらしい...
 
 ## others
 
