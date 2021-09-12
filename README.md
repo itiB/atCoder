@@ -133,6 +133,7 @@
     - [abc212](#abc212)
     - [abc215](#abc215)
     - [abc217](#abc217)
+    - [abc218](#abc218)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1300,6 +1301,14 @@
     - xよりも大きな(小さな)値の一つ目を取れる
       - `let r = s.range(x..).next().unwrap();`
       - `let l = s.range(..x).rev().next().unwrap();`
+
+### abc218
+
+- [A - Weather Forecast](/abc/abc218/a.rs)
+  - 配列のn番目が何かを調べる
+- [B - qwerty](/abc/abc218/b.rs)
+  - 文字列と数字の変換
+  - c2u
 
 ## others
 
