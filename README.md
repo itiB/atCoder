@@ -141,6 +141,7 @@
     - [abc223](#abc223)
     - [abc224](#abc224)
     - [abc225](#abc225)
+    - [abc231](#abc231)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1412,6 +1413,23 @@
 - [C - Calendar Validator](/abc/abc225/c.rs)
   - 数列が特定の数列の一部かを判断する
   - 数式の特性上現れないパターンが出てきたらはじくようにする
+
+### abc231
+
+- [A - Water Pressure](/abc/abc231/a.rs)
+- [B - Election](/abc/abc231/b.rs)
+  - 一番多く出てきたstringを求める問題
+  - HashMapに回数を入れて `&map.values().max().unwrap();` から最大数Valueを取得する
+  - 一致するKeyを探して出力
+- [C - Counting 2](/abc/abc231/c.rs)
+  - クラスメイトの身長が与えられるので2分探索で与えられた値より大きな人数を調べる
+- [D - Neighbors](/abc/abc231/d.rs)
+  - 隣合う人の条件一覧を渡されるのですべての条件を満たして人を1列に並べることができるか調べる問題
+  - 隣合えなくなる条件
+    - 1人に対して3人以上隣り合おうとする
+    - 隣り合おうとする人でループができる
+  - ループ検出 -> UnionFindを用いる
+    - https://qiita.com/xryuseix/items/eb247016ea04a549c720
 
 ## others
 
