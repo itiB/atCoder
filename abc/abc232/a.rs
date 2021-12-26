@@ -1,14 +1,10 @@
 use proconio::input;
 use proconio::marker::Chars;
-
+ 
 fn main() {
     input! {
         s: Chars
     }
-
-    println!("{}", c2u(s[0]) * c2u(s[2]));
-}
-
-fn c2u(c: char) -> usize {
-    c as usize - '0' as usize
+ 
+    println!("{}", s[0].to_digit(10).unwrap() * s[2].to_digit(10).unwrap());
 }

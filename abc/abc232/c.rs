@@ -9,22 +9,25 @@ fn main() {
         cd: [(usize, usize); m]
     }
 
-    let mut taka = vec![Vec::new(); n];
-    let mut aoki = vec![Vec::new(); n];
+    let mut taka = vec![vec![0; n]; n];
+    let mut aoki = vec![vec![0; n]; n];
     for (a, b) in ab {
-        taka[a - 1].push(b-1);
-        taka[b - 1].push(a-1);
+        taka[a - 1][b - 1] = 1;
+        taka[b - 1][a - 1] = 1;
     }
     for (c, d) in cd {
-        aoki[c - 1].push(d-1);
-        aoki[d - 1].push(c-1);
+        aoki[c - 1][d - 1] = 1;
+        aoki[d - 1][c - 1] = 1;
     }
-    for perm in (0..n).permutations(n) {
+    let same = (0..n).permutations(n).any(|perm| {
         for i in 0..n {
-            for j in 0..taka[j].len() {
-                if j == aoki[perm[i]][]
+            for j in 0..n {
+                if taka[i][j] != aoki[perm[i]][perm[j]] {
+                    return false
+                }
             }
         }
-        // println!("{:?}", perm);
-    }
+        true
+    });
+    println!("{}", if same {"Yes"} else {"No"});
 }
