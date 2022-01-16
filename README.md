@@ -143,6 +143,7 @@
     - [abc225](#abc225)
     - [abc231](#abc231)
     - [abc232](#abc232)
+    - [abc234](#abc234)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1448,6 +1449,14 @@
   - 1,1からスタートして壁を進まずにマス目を進んでいく
   - x+1, y+1 でしか移動できないときにMAXどこまでいけるかを調べる
   - DPしたらできた
+
+### abc234
+
+- [A - Weird Function](/abc/abc234/a.rs)
+  - 関数を定義して式を計算する問題
+- [B](/abc/abc234/b.rs)
+  - 三角形の斜辺の長さを総当たりで求める問題
+  - 平方根、std::cmpが使えないとき(f64)のmaxを使う
 
 ## others
 
