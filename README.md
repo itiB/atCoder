@@ -145,6 +145,8 @@
     - [abc232](#abc232)
     - [abc234](#abc234)
     - [abc236](#abc236)
+    - [abc239](#abc239)
+    - [abc242](#abc242)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1470,6 +1472,39 @@
   - 快速しか止まらない駅はどれかを当てる
 - [D - Dance](/abc/abc236/d.rs)
   - ...
+
+### abc239
+
+- [A - Horizon](/abc/abc239/a.rs)
+  - ルート(sqrt)の計算
+- [B - Integer Division](/abc/abc239/b.rs)
+  - ⌊10X​⌋ を出力する
+- [C - Knight Fork](/abc/abc239/c.rs)
+  - 2つの点が与えられるのでお互いルート5の距離になる点に被る駒があるか調べる
+  - 格子点には8つしかその距離になる点がないことを生かしてHashSetに格子点をすべて入れる
+  - もう1つも入れて被る値があるか調べる
+- [D - Prime Sum](/abc/abc239/d.rs)
+  - 2人でそれぞれ決められた範囲の値を言う
+  - 合計で素数になるなら後攻の勝ち、言えなければ敗け
+  - エラトステネスの篩で範囲内の素数一覧を作成、2人の言える範囲で最大何回連続素数でなくせるかを調べる
+  - 2人目の作れる範囲よりも大きいなら先行の勝ちになる
+
+### abc242
+
+- [A - T-shirt](/abc/abc242/a.rs)
+  - Tシャツがもらえる確率を求める問題
+- [B - Minimize Ordering](/abc/abc242/b.rs)
+  - 辞書順で文字列ならびかえ
+  - RustならSortでできる
+  - s.iter().collect::<String>() でCharsは文字列にできる
+- [C - 1111gal password](/abc/abc242/c.rs)
+  - すべての桁で|となりの桁-前のけた| <= 1となるn桁の数がいくつあるか求める問題
+  - DPで埋めていく
+- [D - ABC Transform](/abc/abc242/d.rs)
+  - 文字が規則的に倍の長さに増えていく、特定の段tのk文字目がなにかを調べる問題
+  - 左に行く回数、右に行く回数でなにになるか A→B→C の順で変化することを見つける
+  - 文字列を数字に変換する操作とかある(c2u)
+- [G - Range Pairing Query](/abc/abc242/g.rs)
 
 ## others
 
