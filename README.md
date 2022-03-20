@@ -147,6 +147,7 @@
     - [abc236](#abc236)
     - [abc239](#abc239)
     - [abc242](#abc242)
+    - [abc244](#abc244)
   - [others](#others)
     - [joi2008ho](#joi2008ho)
     - [code-festival-2017-quala](#code-festival-2017-quala)
@@ -1505,6 +1506,19 @@
   - 左に行く回数、右に行く回数でなにになるか A→B→C の順で変化することを見つける
   - 文字列を数字に変換する操作とかある(c2u)
 - [G - Range Pairing Query](/abc/abc242/g.rs)
+
+### abc244
+
+- [A - Last Letter](/abc/abc244/a.rs)
+- [B - Go Straight and Turn Right](/abc/abc244/b.rs)
+  - 進む方角を決めて与えられた指示の回数進んでいく問題
+  - 進む方向に合わせた計算オフセットを用意してそれで進める
+- [C - Yamanote Line Game](/abc/abc244/c.cpp)
+  - インタラクティブにやれと言われた
+  - なぜかRustでできなかったからcppで書いた
+- [D - Swap Hats](/abc/abc244/d.rs)
+  - 文字列を偶数回変換して特定の文字列になるかを判別する
+  - 6パターンしかないので出来上がる文字をすべて列挙して変換先が含まれているか調べた
 
 ## others
 
