@@ -24,7 +24,6 @@ fn main() {
     let mut dist = vec![std::i64::MAX; n];
     dist[0] = 0;
 
-    let mut update = false; // 更新発生したかフラグ
     for iter in 0..n {
         for v in 0..n {
             // まだ緩和されていない点は頂点からの緩和を行わない
@@ -36,15 +35,11 @@ fn main() {
                 // 緩和処理
                 if dist[e.to] > dist[v] + e.weight {
                     dist[e.to] = dist[v] + e.weight;
-                    update = true;
                     if iter == n - 1 && e.to == n - 1 {
                         exist_negative_cycle = true
                     }
                 }
             }
-            if !update {
-                break;
-            } // 更新がなければ最短がすでに求まっている
         }
     }
 
